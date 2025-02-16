@@ -35,6 +35,7 @@
     if (_mapping) {
         [ctrl.ic activateMapping:_mapping];
         self.mappingName = _mapping.name;
+        [ctrl.ic clearContinuousOutputs];
     } else {
         // TODO: Show an error message? Unobtrusively since something
         // is probably running.

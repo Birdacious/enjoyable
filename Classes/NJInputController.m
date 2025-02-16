@@ -192,6 +192,13 @@ static CVReturn _updateDL(CVDisplayLinkRef displayLink,
     }
 }
 
+- (void)clearContinuousOutputs {
+      @synchronized (self) {
+        [_continousOutputs removeAllObjects];
+    }
+    if (_displayLink) CVDisplayLinkStop(_displayLink);
+}
+
 - (void)updateContinuousOutputs {
     self.mouseLoc = [NSEvent mouseLocation];
     for (NJOutput *output in [_continousOutputs copy]) {

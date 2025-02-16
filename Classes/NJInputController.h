@@ -24,6 +24,8 @@
 @property (nonatomic, readonly) NJMapping *currentMapping;
 @property (nonatomic, readonly) NSArray *mappings;
 
+- (void)clearContinuousOutputs;
+
 - (NJMapping *)mappingForKey:(NSString *)name;
 - (NSInteger)indexOfMapping:(NJMapping *)mapping;
 
