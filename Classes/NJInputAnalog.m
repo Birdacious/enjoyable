@@ -33,7 +33,7 @@ static float normalize(CFIndex p, CFIndex min, CFIndex max) {
                                                    parent:self]];
         _rawMax = IOHIDElementGetPhysicalMax(element);
         _rawMin = IOHIDElementGetPhysicalMin(element);
-        _deadZone = 0.25f; // (1.0f / (float) (_rawMax - _rawMin)) * 10.0f;
+        _deadZone = 0.05f;
     }
     return self;
 }

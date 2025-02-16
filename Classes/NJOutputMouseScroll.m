@@ -54,9 +54,6 @@
 }
 
 - (BOOL)update:(NJInputController *)ic {
-    if (self.magnitude < 0.05f)
-        return NO; // dead zone
-    
     CGEventRef scroll = CGEventCreateScrollWheelEvent(NULL,
                                                       kCGScrollEventUnitPixel,
                                                       2,
